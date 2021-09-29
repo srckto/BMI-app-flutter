@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../palette.dart';
 
-class Result extends StatefulWidget {
+class Result extends StatelessWidget {
   final bool isMeal;
   final double height;
   final int weight;
@@ -16,47 +16,22 @@ class Result extends StatefulWidget {
     required this.age,
   }) : super(key: key);
 
-  @override
-  State<Result> createState() => _ResultState();
-}
 
-class _ResultState extends State<Result> {
-  double _bmi = 0;
-  String _state = "Normal";
+  double get _bmi {
+    double newHeight = height / 100;
 
-  @override
-  void initState() {
-    super.initState();
-    getBmi();
-    getState();
+    return (weight) / (newHeight * newHeight);
   }
 
-
-  void getBmi() {
-    double newHeight = widget.height / 100;
-
-    setState(() {
-      _bmi = (widget.weight) / (newHeight * newHeight);
-    });
-  }
-
-  void getState() {
+  String get _state {
     if (_bmi < 18.5) {
-      setState(() {
-        _state = "UnderWeight";
-      });
+      return "UnderWeight";
     } else if (_bmi >= 18.5 && _bmi < 24.9) {
-      setState(() {
-        _state = "Normal";
-      });
+      return "Normal";
     } else if (_bmi >= 25 && _bmi <= 29.9) {
-      setState(() {
-        _state = "OverWirght";
-      });
+      return "OverWirght";
     } else {
-      setState(() {
-        _state = "Obese";
-      });
+      return "Obese";
     }
   }
 
@@ -130,7 +105,7 @@ class _ResultState extends State<Result> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text("Your Height", style: Theme.of(context).textTheme.headline3!.copyWith(fontSize: 20)),
-                            Text("${widget.height}", style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20)),
+                            Text("${height}", style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20)),
                           ],
                         ),
                       ),
@@ -141,7 +116,7 @@ class _ResultState extends State<Result> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text("Your Weight", style: Theme.of(context).textTheme.headline3!.copyWith(fontSize: 20)),
-                            Text("${widget.weight}", style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20)),
+                            Text("${weight}", style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20)),
                           ],
                         ),
                       ),
@@ -152,7 +127,7 @@ class _ResultState extends State<Result> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text("Your Age", style: Theme.of(context).textTheme.headline3!.copyWith(fontSize: 20)),
-                            Text("${widget.age}", style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20)),
+                            Text("${age}", style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20)),
                           ],
                         ),
                       ),
