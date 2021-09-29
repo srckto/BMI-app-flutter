@@ -1,6 +1,5 @@
 # bmi_app
 
-Flutter app 
 
 ## Getting Started
 
