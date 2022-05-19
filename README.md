@@ -1,15 +1,9 @@
 # bmi_app
 
 
-## Getting Started
+### Screenshots.
 
-build with Flutter
+<img src="https://user-images.githubusercontent.com/85505451/169257098-b4aea6c6-7769-4781-9e44-1d55125c7222.png" width="350">  <img src="https://user-images.githubusercontent.com/85505451/169257092-0947812a-28e9-490d-a048-e8b4d8f28c5b.png" width="350">
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<!-- ![Screenshot_1652951033](https://user-images.githubusercontent.com/85505451/169257092-0947812a-28e9-490d-a048-e8b4d8f28c5b.png) -->
+<!-- ![Screenshot_1652951026](https://user-images.githubusercontent.com/85505451/169257098-b4aea6c6-7769-4781-9e44-1d55125c7222.png) -->
